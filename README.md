@@ -18,7 +18,7 @@ This is an Adventure Logbook created as a place to share some of my hobbies and 
 * Links to my instagram page
 
 ### Snapshots
-
+![Landing Page](https://github.com/klaraCombrinck/The-Unexpected-Adventure/README screenshots/Landing page.png)
 
 ## Author
 Klara Combrinck - combrinck.klara@gmail.com
