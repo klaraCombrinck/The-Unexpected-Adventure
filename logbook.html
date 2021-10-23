@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Unexpected Adventure</title>
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Font awesome link -->
+    <script src="https://kit.fontawesome.com/ee6a946502.js" crossorigin="anonymous"></script>
+    <!-- JQuery CDN link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <!-- JS link -->
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <!-- Title & Navigation Bar-->
+    <header class="title-nav-wrapper">
+
+        <!--Title-->
+            <div class="title">
+                <a class="title-name" href="index.html">The Unexpected Adventure</a>
+            </div>
+        
+        <!-- Navigation -->
+            <nav>
+                <ul class="title-nav-items">
+                    <li class="nav-link"><a href="index.html">Home</a></li>
+                    <li class="nav-link"><a href="logbook.html">Logbook</a></li>
+                    <li class="nav-link"><a href="bookmarks.html">Bookmarks</a></li>
+                    <li class="nav-link"><a href="contact.html">Contact</a></li>
+                    <li class="nav-link"><a target="_blank" href="http://www.instagram.com/combrinckklara">Instagram</a></li>
+                </ul>
+            </nav> 
+
+    </header>
+
+    <!--First Logbook parallax image-->
+    <div class="logbook-p-img1">
+        <div class="p-text-middle">
+            <span class="logbook-heading">WELCOME TO <br> THE LAID BACK LOGBOOK</span>
+            <div class="scroll-down-holder">
+                <span class="scroll-down-span">scroll down</span>
+            </div>
+        </div>   
+    </div>
+
+    <!-- Logbook Table -->
+    <section class="section-dark dropdown">   
+        <h2>Check out some of my most recent adventures:</h2> 
+        <button class="dropdown-button un-clicked">Table of Contents</button>
+        <br>
+        <div id="dropdown-menu" class="dropdown-content section-dark">
+            <table class="content-table">
+              <thead>
+                <tr>
+                    <th>Blog</th>
+                    <th>Adventure</th>
+                    <th>Location</th>
+                    <th>Difficulty</th>
+                    <th>Date</th>
+                </tr>
+              </thead>
+              
+              <tbody id="logbook-list"> 
+                   <!-- Blog posts wil be generated here-->             
+              </tbody>
+
+            </table>
+        </div>
+    </section>
+    
+    <!-- Logbook entries added here with js-->
+
+    <!--Last Logbook parallax image-->
+    <div id="logbook-last-img" class="logbook-p-img1">
+        <div class="p-text-middle">
+            <a class="p-text-link" target="_blank" href="http://www.instagram.com/combrinckklara">Join my adventures on Instagram</a>
+        </div>  
+    </div>
+
+    <footer class="footer">
+        <!-- Bottom Navigation -->
+        <nav>
+            <ul class="nav-items">
+                <li class="nav-link"><a class="link-light" href="index.html">Home</a></li>
+                <li class="nav-link"><a class="link-light" href="logbook.html">Logbook</a></li>
+                <li class="nav-link"><a class="link-light" href="bookmarks.html">Bookmarks</a></li>
+                <li class="nav-link"><a class="link-light" href="contact.html">Contact</a></li>
+                <li class="nav-link"><a class="link-light" target="_blank" href="http://www.instagram.com/combrinckklara">Instagram</a></li>
+            </ul>
+        </nav> 
+
+        <!-- Copyright -->
+        <p>The Unexpected Adventure &copy; 2021</p>
+    </footer>
+
+</body>
+</html>

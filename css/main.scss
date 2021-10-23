@@ -1,0 +1,446 @@
+/* References:
+Parallax Layout Inspiration - http://www.mymountaintherapy.com/
+
+Traversy Media's youtube videos were extremely helpful. I have listed some of the specific videos that helped me to create this website:
+CSS for Beginners - https://www.youtube.com/watch?v=yfoY53QXEnI
+Parallax images - https://www.youtube.com/watch?v=JttTcnidSdQ&t=2s
+SCSS/SASS - https://www.youtube.com/watch?v=nu5mdN2JIwM&t=1064s */
+
+/* ========================= Variables ======================== */
+$main-light: rgb(255, 255, 255);
+$main-dark: rgb(40, 46, 52);
+$font-light: rgb(221, 221, 221);
+$font-dark: rgb(28, 28, 28);
+$hover-grey: rgb(148, 146, 146);
+$button-grey: rgb(147, 147, 147);
+
+/* ============================ Global Styling =========================== */
+body,
+html {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  font-size: 16px; /* root font-size = 16px */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: lighter;
+  line-height: 1.5rem;
+  color: $font-dark;
+  box-sizing: border-box; /* includes padding in total width */
+}
+
+h2 {
+  font-weight: lighter;
+}
+
+a {
+  text-decoration: none;
+  color: $font-dark;
+  padding: 0;
+  transition: color 0.5s;
+}
+
+a:hover {
+  color: $hover-grey;
+}
+
+/* ========================= Navigation Bars ========================== */
+
+.title-nav-wrapper {
+  max-width: 100%;
+  padding: 10px 80px;
+  display: flex;
+  align-items: center;
+  /*only at top with first p-img */
+  position: sticky;
+  z-index: 9;
+}
+
+.title {
+  margin-right: auto;
+}
+
+.nav-items {
+  margin: 0; /*removes default list structure*/
+  padding: 5px;
+  font-size: 0.875rem;
+}
+
+/* Title Navigation Bar - flex left */
+.title-nav-items {
+  @extend .nav-items;
+  margin-left: auto;
+  display: flex;
+}
+
+.nav-link {
+  display: inline;
+  text-align: right;
+  margin-left: 15px;
+}
+
+.link-light {
+  color: $font-light;
+}
+
+.no-pointer {
+  cursor: default;
+}
+
+.darker-text {
+  color: $hover-grey;
+}
+
+/* =========================== Parallax Images ========================= */
+
+// Default parallax image properties
+.parallax {
+  height: 100vh;
+  position: relative; /* changes relative to normal place */
+  background-attachment: fixed; /* fixed: gives parallax effect, scroll: normal */
+  background-position: center; /* image centered in div */
+  background-repeat: no-repeat; /* just one image in div */
+  background-size: cover; /* scales img as large as poss to fill container (may stretch) */
+}
+
+// Index page images
+.p-img1 {
+  @extend .parallax;
+  background-image: url("../images/p-img6.jpg");
+}
+
+.p-img2 {
+  @extend .parallax;
+  background-image: url("../images/p-img2.jpg");
+}
+
+.p-img3 {
+  @extend .parallax;
+  background-image: url("../images/p-img3.jpg");
+}
+
+// Logbook page images
+.logbook-p-img1 {
+  @extend .parallax;
+  background-image: url("../images/p-img2.jpg");
+}
+
+// Contact parallax images
+.contact-p-img1 {
+  @extend .parallax;
+  background-image: url("../images/p-img4.jpeg");
+}
+
+// Bookmark parallax image
+.bookmark-p-img1 {
+  @extend .parallax;
+  background-image: url("../images/p-img9.jpg");
+}
+
+// Short p-images
+.p-height {
+  height: 20vh;
+}
+
+// Short p-images
+.p-height-60 {
+  height: 60vh;
+}
+
+/* ======================= Text on Parallax Images ===================*/
+
+.p-text-basic {
+  position: absolute; /* removed fr normal flow, posit relative to closest positioned ancestor - p-img*/
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  color: $main-light;
+  font-size: 4.375rem;
+  letter-spacing: 6px;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.p-text-top {
+  @extend .p-text-basic;
+  top: 20vh;
+}
+
+.p-text-high {
+  @extend .p-text-basic;
+  top: 30vh;
+}
+
+.p-text-middle {
+  @extend .p-text-basic;
+  top: 46vh;
+}
+
+#index-title {
+  font-size: 6rem;
+  line-height: 6rem;
+}
+
+.logbook-heading {
+  font-size: 4rem;
+}
+
+.scroll-down-span {
+  font-size: 0.9rem;
+}
+
+// Hover on index page parallax text
+.p-text-high span {
+  transition: color 1s;
+}
+
+.p-text-high span:hover {
+  color: $hover-grey;
+}
+
+.p-text-link {
+  color: $main-light;
+  transition: color 1s;
+}
+
+.p-text-link:hover {
+  color: $hover-grey;
+}
+
+/* ========================= Text Sections ========================== */
+
+.section {
+  text-align: center;
+  padding: 20px 80px;
+}
+
+.section-light {
+  @extend .section;
+  background-color: $main-light;
+  color: $font-dark;
+}
+
+.section-dark {
+  @extend .section;
+  background-color: $main-dark;
+  color: $font-light;
+}
+
+/* ========================= Logbook Table ========================= */
+
+.logbook-table {
+  display: none;
+}
+
+.content-table {
+  width: 100%;
+  margin: 5px auto 25px auto;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.content-table thead th {
+  margin-bottom: 20px;
+}
+
+.content-table th,
+.content-table td {
+  padding: 10px 10px;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid $hover-grey;
+}
+
+.content-table tr {
+  transition: color 0.5s;
+}
+
+.content-table tr:hover {
+  color: $hover-grey;
+}
+
+/* ============ Logbook Like, Bookmark & Comment buttons ============ */
+
+.section-description {
+  display: flex;
+  justify-content: center;
+}
+
+.bookmark-headings,
+.bookmark-empty-msg {
+  opacity: 1;
+}
+
+.blog-tab {
+  color: $hover-grey;
+  display: flex;
+  justify-content: center;
+}
+
+.blog-tab > p {
+  padding: 0 7px;
+}
+
+.bookmark-me,
+.like-button,
+.dropdown-button,
+.comment-button {
+  cursor: pointer;
+  border: 1px solid $button-grey;
+  border-radius: 4px;
+  margin-left: 10px;
+  transition: color 0.5s;
+}
+
+.like-button:hover,
+.bookmark-me:hover,
+.dropdown-button,
+.comment-button {
+  background-color: $button-grey;
+  color: $font-light;
+}
+
+.un-clicked {
+  background-color: transparent;
+  color: $button-grey;
+}
+
+.clicked {
+  background-color: $button-grey;
+  color: $font-light;
+}
+
+.alert {
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* ======================== Dropdown logbook menu ================== */
+
+.dropdown {
+  // outside div on section
+  position: relative;
+}
+
+.dropdown-content {
+  // content hidden by default
+  display: none;
+  position: relative;
+}
+
+.show-dropdown {
+  display: block;
+}
+
+/* =========================== Comments ============================= */
+
+.comment-content {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.comment-heading {
+  margin: 0;
+}
+
+.comment-text {
+  margin: 0;
+  margin-left: 25px;
+}
+
+.input-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.comment-input {
+  padding: 2px;
+  margin: 0;
+  margin-left: 15px;
+  width: 300px;
+  background-color: $font-light;
+  border: 1px solid $hover-grey;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* ======================= Contact Page Form ======================== */
+
+.form {
+  border-radius: 5px;
+  background-color: $main-light;
+  padding: 20px;
+}
+
+form input[type="text"],
+form input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid $hover-grey;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: $main-dark;
+  color: $font-light;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: $main-light;
+  color: $font-dark;
+  transition-duration: 0.3s;
+}
+
+// Radio buttons
+label {
+  color: $font-dark;
+}
+
+input[type="radio"] {
+  appearance: none;
+  border-radius: 30%;
+  width: 13px;
+  height: 13px;
+  border: 1px solid $main-dark;
+}
+
+input[type="radio"]:checked {
+  border: 5px solid $main-dark;
+}
+
+/* ============================== Footer ========================= */
+
+.footer {
+  text-align: center;
+  padding: 5px 80px;
+  background-color: $main-dark;
+  color: $font-light;
+}
+
+/* =========================== Media Queries ======================= */
+
+/* Mobile - turn off parallax on mobile */
+@media (max-width: 568px) {
+  .p-img1 .p-img2 .p-img3 {
+    background-attachment: scroll;
+  }
+}
+
+@media (min-width: 1250px) {
+  .section {
+    padding: 20px 25%;
+  }
+}

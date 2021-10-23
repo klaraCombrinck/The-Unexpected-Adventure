@@ -1,0 +1,453 @@
+/* References:
+Parallax Layout Inspiration - http://www.mymountaintherapy.com/
+
+Traversy Media's youtube videos were extremely helpful. I have listed some of the specific videos that helped me to create this website:
+CSS for Beginners - https://www.youtube.com/watch?v=yfoY53QXEnI
+Parallax images - https://www.youtube.com/watch?v=JttTcnidSdQ&t=2s
+SCSS/SASS - https://www.youtube.com/watch?v=nu5mdN2JIwM&t=1064s */
+/* ========================= Variables ======================== */
+/* ============================ Global Styling =========================== */
+body,
+html {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  font-size: 16px;
+  /* root font-size = 16px */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: lighter;
+  line-height: 1.5rem;
+  color: #1c1c1c;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* includes padding in total width */
+}
+
+h2 {
+  font-weight: lighter;
+}
+
+a {
+  text-decoration: none;
+  color: #1c1c1c;
+  padding: 0;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+a:hover {
+  color: #949292;
+}
+
+/* ========================= Navigation Bars ========================== */
+.title-nav-wrapper {
+  max-width: 100%;
+  padding: 10px 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /*only at top with first p-img */
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 9;
+}
+
+.title {
+  margin-right: auto;
+}
+
+.nav-items, .title-nav-items {
+  margin: 0;
+  /*removes default list structure*/
+  padding: 5px;
+  font-size: 0.875rem;
+}
+
+/* Title Navigation Bar - flex left */
+.title-nav-items {
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav-link {
+  display: inline;
+  text-align: right;
+  margin-left: 15px;
+}
+
+.link-light {
+  color: #dddddd;
+}
+
+.no-pointer {
+  cursor: default;
+}
+
+.darker-text {
+  color: #949292;
+}
+
+/* =========================== Parallax Images ========================= */
+.parallax, .p-img1, .p-img2, .p-img3, .logbook-p-img1, .contact-p-img1, .bookmark-p-img1 {
+  height: 100vh;
+  position: relative;
+  /* changes relative to normal place */
+  background-attachment: fixed;
+  /* fixed: gives parallax effect, scroll: normal */
+  background-position: center;
+  /* image centered in div */
+  background-repeat: no-repeat;
+  /* just one image in div */
+  background-size: cover;
+  /* scales img as large as poss to fill container (may stretch) */
+}
+
+.p-img1 {
+  background-image: url("../images/p-img6.jpg");
+}
+
+.p-img2 {
+  background-image: url("../images/p-img2.jpg");
+}
+
+.p-img3 {
+  background-image: url("../images/p-img3.jpg");
+}
+
+.logbook-p-img1 {
+  background-image: url("../images/p-img2.jpg");
+}
+
+.contact-p-img1 {
+  background-image: url("../images/p-img4.jpeg");
+}
+
+.bookmark-p-img1 {
+  background-image: url("../images/p-img9.jpg");
+}
+
+.p-height {
+  height: 20vh;
+}
+
+.p-height-60 {
+  height: 60vh;
+}
+
+/* ======================= Text on Parallax Images ===================*/
+.p-text-basic, .p-text-top, .p-text-high, .p-text-middle {
+  position: absolute;
+  /* removed fr normal flow, posit relative to closest positioned ancestor - p-img*/
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: 4.375rem;
+  letter-spacing: 6px;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.p-text-top {
+  top: 20vh;
+}
+
+.p-text-high {
+  top: 30vh;
+}
+
+.p-text-middle {
+  top: 46vh;
+}
+
+#index-title {
+  font-size: 6rem;
+  line-height: 6rem;
+}
+
+.logbook-heading {
+  font-size: 4rem;
+}
+
+.scroll-down-span {
+  font-size: 0.9rem;
+}
+
+.p-text-high span {
+  -webkit-transition: color 1s;
+  transition: color 1s;
+}
+
+.p-text-high span:hover {
+  color: #949292;
+}
+
+.p-text-link {
+  color: white;
+  -webkit-transition: color 1s;
+  transition: color 1s;
+}
+
+.p-text-link:hover {
+  color: #949292;
+}
+
+/* ========================= Text Sections ========================== */
+.section, .section-light, .section-dark {
+  text-align: center;
+  padding: 20px 80px;
+}
+
+.section-light {
+  background-color: white;
+  color: #1c1c1c;
+}
+
+.section-dark {
+  background-color: #282e34;
+  color: #dddddd;
+}
+
+/* ========================= Logbook Table ========================= */
+.logbook-table {
+  display: none;
+}
+
+.content-table {
+  width: 100%;
+  margin: 5px auto 25px auto;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.content-table thead th {
+  margin-bottom: 20px;
+}
+
+.content-table th,
+.content-table td {
+  padding: 10px 10px;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #949292;
+}
+
+.content-table tr {
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+.content-table tr:hover {
+  color: #949292;
+}
+
+/* ============ Logbook Like, Bookmark & Comment buttons ============ */
+.section-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bookmark-headings,
+.bookmark-empty-msg {
+  opacity: 1;
+}
+
+.blog-tab {
+  color: #949292;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.blog-tab > p {
+  padding: 0 7px;
+}
+
+.bookmark-me,
+.like-button,
+.dropdown-button,
+.comment-button {
+  cursor: pointer;
+  border: 1px solid #939393;
+  border-radius: 4px;
+  margin-left: 10px;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+.like-button:hover,
+.bookmark-me:hover,
+.dropdown-button,
+.comment-button {
+  background-color: #939393;
+  color: #dddddd;
+}
+
+.un-clicked {
+  background-color: transparent;
+  color: #939393;
+}
+
+.clicked {
+  background-color: #939393;
+  color: #dddddd;
+}
+
+.alert {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* ======================== Dropdown logbook menu ================== */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: relative;
+}
+
+.show-dropdown {
+  display: block;
+}
+
+/* =========================== Comments ============================= */
+.comment-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10px;
+}
+
+.comment-heading {
+  margin: 0;
+}
+
+.comment-text {
+  margin: 0;
+  margin-left: 25px;
+}
+
+.input-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.comment-input {
+  padding: 2px;
+  margin: 0;
+  margin-left: 15px;
+  width: 300px;
+  background-color: #dddddd;
+  border: 1px solid #949292;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* ======================= Contact Page Form ======================== */
+.form {
+  border-radius: 5px;
+  background-color: white;
+  padding: 20px;
+}
+
+form input[type="text"],
+form input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #949292;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: #282e34;
+  color: #dddddd;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: white;
+  color: #1c1c1c;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+label {
+  color: #1c1c1c;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 30%;
+  width: 13px;
+  height: 13px;
+  border: 1px solid #282e34;
+}
+
+input[type="radio"]:checked {
+  border: 5px solid #282e34;
+}
+
+/* ============================== Footer ========================= */
+.footer {
+  text-align: center;
+  padding: 5px 80px;
+  background-color: #282e34;
+  color: #dddddd;
+}
+
+/* =========================== Media Queries ======================= */
+/* Mobile - turn off parallax on mobile */
+@media (max-width: 568px) {
+  .p-img1 .p-img2 .p-img3 {
+    background-attachment: scroll;
+  }
+}
+
+@media (min-width: 1250px) {
+  .section, .section-light, .section-dark {
+    padding: 20px 25%;
+  }
+}
+/*# sourceMappingURL=main.css.map */
