@@ -1,5 +1,5 @@
 # The-Unexpected-Adventure
-This is an Adventure Logbook created as a place to share some of my hobbies and activities. The main purpose of this website is to showcase my current web development skills. [Project Link](http://github.com)
+This is an Adventure Logbook created as a place to share some of my hobbies and activities. The main purpose of this website is to showcase my current web development skills. [Check out my Website!](http://github.com)
 
 ## About the Project
 
