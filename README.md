@@ -10,10 +10,11 @@ This is an Adventure Logbook created as a place to share some of my hobbies and 
 
 ### Features
 * Chained animation effects on the landing page to create mist effect
+* Parallax image scrolling
 * Dropdown table of contents in the logbook page
 * Saves user likes, bookmarks and comments to local storage
 * Alerts user to current number of bookmarks
-* User can access their saved bookmarks
+* User access to their saved bookmarks
 * Links to my instagram page
 
 ### Snapshots
