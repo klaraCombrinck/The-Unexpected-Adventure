@@ -1,5 +1,5 @@
 # The-Unexpected-Adventure
-This is an Adventure Logbook created as a place to share some of my hobbies and activities. The main purpose of this website is to showcase my current web development skills. [Check out my Website!](http://github.com)
+This is an Adventure Logbook created as a place to share some of my hobbies and activities. The main purpose of this website is to showcase my current web development skills. [Check out my Website!](https://klaracombrinck.github.io/The-Unexpected-Adventure/)
 
 ## About the Project
 
@@ -30,4 +30,4 @@ Klara Combrinck - combrinck.klara@gmail.com
 * Pexels Free Stock Photos [@Pexels](https://www.pexels.com/)
 
 ## Project Link: 
-[The Unexpected Adventure](http://github.com) 
+[The Unexpected Adventure](https://klaracombrinck.github.io/The-Unexpected-Adventure/) 
