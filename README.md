@@ -1,14 +1,25 @@
 # The-Unexpected-Adventure
 This is an Adventure Logbook created as a place to share some of my hobbies and activities. The main purpose of this website is to showcase my current web development skills. [Check out my Website!](https://klaracombrinck.github.io/The-Unexpected-Adventure/)
 
-## About the Project
+# Table of Contents
+1. About the Project  
+  a. Built With  
+  b. Features  
+  c. Preview
+2. Installation Guide
+3. Usage
+4. Author
+5. Aknowledgements
+6. Project Link
 
-### Built With
+## 1. About the Project
+
+### a. Built With
 * HTML
 * SCSS
 * Vanilla JS & JQuery 
 
-### Features
+### b. Features
 * Chained animation effects on the landing page to create mist effect
 * Parallax image scrolling
 * Dropdown table of contents in the logbook page
@@ -17,10 +28,23 @@ This is an Adventure Logbook created as a place to share some of my hobbies and 
 * User access to their saved bookmarks
 * Links to my instagram page
 
-### Snapshots
+### c. Preview
 ![Preview Images](https://github.com/klaraCombrinck/The-Unexpected-Adventure/blob/main/Preview1.png)
 
-## Author
+## 2. Installation Guide
+
+## 3. Usage
+Each user can interact with a blog post by liking, bookmarking or commenting on a post. These selections are then saved to that user's local storage and then displayed each time that user visits the site.  
+
+Bookmarked posts are also all displayed together on the Bookmarks page.
+
+![Bookmarks](https://github.com/klaraCombrinck/The-Unexpected-Adventure/blob/main/Preview1.png)
+
+The comments feature allows the user to add a comment to a blog post.
+
+![Comments](https://github.com/klaraCombrinck/The-Unexpected-Adventure/blob/main/Preview1.png)
+
+## 4. Author
 Klara Combrinck - combrinck.klara@gmail.com
 
 ## Aknowledgements:
