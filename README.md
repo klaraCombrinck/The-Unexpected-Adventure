@@ -38,11 +38,11 @@ Each user can interact with a blog post by liking, bookmarking or commenting on 
 
 Bookmarked posts are also all displayed together on the Bookmarks page.
 
-![Bookmarks](https://github.com/klaraCombrinck/The-Unexpected-Adventure/blob/main/Preview1.png)
+![Bookmarks](https://github.com/klaraCombrinck/The-Unexpected-Adventure/blob/main/TUABookmarks.png)
 
 The comments feature allows the user to add a comment to a blog post.
 
-![Comments](https://github.com/klaraCombrinck/The-Unexpected-Adventure/blob/main/Preview1.png)
+![Comments](https://github.com/klaraCombrinck/The-Unexpected-Adventure/blob/main/TUAComments.png)
 
 ## 4. Author
 Klara Combrinck - combrinck.klara@gmail.com
